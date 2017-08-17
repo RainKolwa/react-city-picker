@@ -29,10 +29,10 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
-  "author": "",
+  "author": "rainkolwa",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/RainKolwa/react-city-picker",
   "keywords": [
     "react china city select",
     "react city picker",
