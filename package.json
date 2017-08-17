@@ -1,7 +1,7 @@
 {
-  "name": "react-loading-button",
-  "version": "1.0.0",
-  "description": "react-loading-button React component",
+  "name": "react-city-picker",
+  "version": "1.0.1",
+  "description": "A React component for china city selections",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -23,7 +23,9 @@
     "react": "15.x"
   },
   "devDependencies": {
+    "china-area-data": "^3.0.0",
     "nwb": "0.18.x",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -32,6 +34,8 @@
   "license": "MIT",
   "repository": "",
   "keywords": [
+    "react china city select",
+    "react city picker",
     "react-component"
   ]
 }

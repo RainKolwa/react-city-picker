@@ -1,16 +1,57 @@
-# react-loading-button
+# react-city-picker
+> A React component for china city selections
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+## Installation
+```bash
+yarn add react-city-picker
+# npm i react-city-picker -S
+```
 
-Describe react-loading-button here.
+## Usage
+```javascript
+import React, {Component} from 'react'
+import {render} from 'react-dom'
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+import CityPicker from 'react-city-picker'
+import data from '../../node_modules/china-area-data/data'
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+class Demo extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      province: '650000',
+      city: '650400',
+      district: '650421',
+    }
+  }
+  
+  handleChange = (value) => {
+    console.log(value)
+  }
+  
+  render() {
+    const { province, city, district } = this.state
+    return (
+      <div>
+        <h1>demo</h1>
+        <p>默认:</p>
+        <CityPicker
+          source={data}
+          onOptionChange={this.handleChange} />
+        <p>有初始值:</p>
+        <CityPicker
+          source={data}
+          selectedProvince={province}
+          selectedCity={city}
+          selectedDistrict={district}
+          onOptionChange={this.handleChange} />
+      </div>
+    )
+  }
+}
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+render(<Demo/>, document.querySelector('#demo'))
+```
+
+## License
+MIT
