@@ -1,6 +1,9 @@
 # react-city-picker
 > A React component for china city selections
 
+## Examples
+- [demo](https://rainkolwa.github.io/react-city-picker/demo/dist/)
+
 ## Installation
 ```bash
 yarn add react-city-picker
