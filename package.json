@@ -1,6 +1,6 @@
 {
   "name": "react-city-picker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React component for china city selections",
   "main": "lib/index.js",
   "module": "es/index.js",
