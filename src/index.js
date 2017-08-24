@@ -42,7 +42,7 @@ export default class CityPicker extends Component {
   }
   
   render() {
-    const { source, onOptionChange, selectedProvince, selectedCity, selectedDistrict, ...props } = this.props
+    const { source, onOptionChange, selectedProvince, selectedCity, selectedDistrict, noDistrict, ...props } = this.props
     const { province, city, district } = this.state
     const provinces = Object.keys(source['86']).map(item => ({code: item, value: source['86'][item]}))
     const cities = province ? Object.keys(source[province] || {}).map(item => ({code: item, value: source[province][item]})) : []
@@ -53,7 +53,7 @@ export default class CityPicker extends Component {
         {source[province] &&
           <Select name="city" value={city} handleChange={this.handleOptionChange} options={cities} />
         }
-        {source[city] &&
+        {source[city] && !noDistrict &&
           <Select name="district" value={district} handleChange={this.handleOptionChange} options={districts} />
         }
       </div>
@@ -66,5 +66,6 @@ CityPicker.propTypes = {
   selectedProvince: PropTypes.string,
   selectedCity: PropTypes.string,
   selectedDistrict: PropTypes.string,
+  noDistrict: PropTypes.bool,
   onOptionChange: PropTypes.func,
 }

@@ -34,6 +34,11 @@ class Demo extends Component {
           selectedCity={city}
           selectedDistrict={district}
           onOptionChange={this.handleChange} />
+        <p>二级联动:</p>
+        <CityPicker
+          source={data}
+          noDistrict
+          onOptionChange={this.handleChange} />
       </div>
     )
   }
